@@ -46,8 +46,10 @@ this project about making Etl pipeline
  # other tools
  
  - python
- -sql
- -airflow
+ 
+ - sql
+ 
+ - airflow
  
 
  
