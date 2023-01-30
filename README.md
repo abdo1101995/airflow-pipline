@@ -28,7 +28,7 @@ this project about making Etl pipeline
 - load them in redshift to help bi team for analytical tasks
 
 
-#Star Schema
+# Star Schema
 ![alt text](https://github.com/abdo1101995/airflow-pipline/blob/main/Screenshot%202022-11-09%20190054.png)
 
 # Airflow Dags
