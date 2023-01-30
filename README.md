@@ -26,6 +26,8 @@ this project about making Etl pipeline
 - Etract data from s3 bucket
 - transform it to informative tables by using star schema (fact + dimensional tables) 
 - load them in redshift to help bi team for analytical tasks
+
+
 #Star Schema
 ![alt text](https://github.com/abdo1101995/airflow-pipline/blob/main/Screenshot%202022-11-09%20190054.png)
 
