@@ -22,48 +22,17 @@ The log files in the dataset you'll be working with are partitioned by year and 
 # Overview
 
 this project about making Etl pipeline 
-
+- connect aws services to airflow
 - Etract data from s3 bucket
 - transform it to informative tables by using star schema (fact + dimensional tables) 
 - load them in redshift to help bi team for analytical tasks
+#Star Schema
+![alt text](https://github.com/abdo1101995/airflow-pipline/blob/main/Screenshot%202022-11-09%20190054.png)
 
-# files 
+# Airflow Dags
 
-- dwh.cfg
+![alt text](https://github.com/abdo1101995/airflow-pipline/blob/main/udac-example-dag.png)
 
-put all aws configurations
-
-- sql_queries.py
-
-make all queries drop ,create , insert.
-
-we first make staging data to help us in insert fact and dimensional tables.
-
-we used s3 bucket to extract data from it and put in staging tables .
-
-# fact Table
-songplays - records in event data associated with song plays i.e. records with page NextSong
-{songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent}.
-
-# dimensional tables
-
-- users - users in the app
-{user_id, first_name, last_name, gender, level}
-- songs - songs in music database
-{song_id, title, artist_id, year, duration}
-- artists - artists in music database
-{artist_id, name, location, lattitude, longitude}
-- time - timestamps of records in songplays broken down into specific units
-{start_time, hour, day, week, month, year, weekday}
-
-- create_tables.py
-
- connect in database in redshift and create all schema .
- 
- - etl.py
- 
- load data in staging and insert data in tables.
- 
  # aws_services uses
  
  - s3
@@ -74,12 +43,9 @@ songplays - records in event data associated with song plays i.e. records with p
  
  # other tools
  
- - python(configparser+ psycopg2)
+ - python
+ -sql
+ -airflow
  
+
  
- # how to run the Python scripts
- 
- after making redshift clould and putting configurations
- - make all queries in sql_queries.py
- - first run create_tables.py in terminal
- - second  run etl.py in terminal
